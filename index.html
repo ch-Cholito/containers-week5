@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container,
+        .containerfooter {
+            display: flex;
+            flex-flow: row;
+            width: 1240px;
+            margin: 15px;
+            border: 1px solid red;
+            align-items: stretch;
+        }
+
+        .main {
+            display: flex;
+            flex-flow: row;
+            border: 1px solid black;
+            height: 70vh;
+            align-items: stretch;
+            flex-grow: 1;
+        }
+
+        .section,
+        .aside {
+            flex: 0 0 100%;
+            margin: 15px;
+            border: 1px solid green;
+            display: flex;
+        }
+
+        .aside {
+            flex: 0 0 33vh
+        }
+
+        .section {
+            flex: 0 0 66vh;
+            flex-grow: 1;
+            align-items: center;
+        }
+
+        .containerfooter {
+            align-content: space-around;
+            height: 10vh;
+            align-items:center;
+
+        }
+
+        .footersection {
+            flex-basis: 300px;
+            flex-grow: 1;
+            margin: 10px;
+        }
+
+
+        .sectionpart{border:1px solide blueviolet}
+    </style>
+
+</head>
+
+<body>
+    <header class="container">
+        заголовок
+    </header>
+    <main class="container">
+        <div class="main">
+            <section class="section"> 
+                <div class="sectionpart">основная часть</div>
+                <div class="sectionpart">часть 2</div>
+                <div class="sectionpart">часть 3</div>
+                <div class="sectionpart">часть 4</div>           
+            </Section>
+            <aside class="aside">
+                сбоку
+            </aside>
+        </div>
+    </main>
+
+    <footer class="containerfooter">
+        <div class="footersection">секция 1</div>
+        <div class="footersection">секция 2</div>
+        <div class="footersection">секция 3</div>
+        <div class="footersection">секция 4</div>
+    </footer>
+
+</body>
+
+</html>
